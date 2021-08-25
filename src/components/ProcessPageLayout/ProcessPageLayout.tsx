@@ -22,9 +22,11 @@ export const ProcessPageLayout: React.FC<ProcessPageLayoutProps> = ({
   return (
     <Container className={pageStyles.container}>
       {appBar}
-      <Box component="header" className={pageStyles.header}>
-        {header}
-      </Box>
+      {header && (
+        <Box component="header" className={pageStyles.header}>
+          {header}
+        </Box>
+      )}
       <Box component="main" className={pageStyles.main}>
         {main}
       </Box>

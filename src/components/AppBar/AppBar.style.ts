@@ -4,7 +4,6 @@ import { theme } from "_config/theme";
 const toolbarHeight = 48;
 
 export const useStyles = makeStyles({
-  
   appheader: {
     boxShadow: "none",
   },
@@ -23,10 +22,12 @@ export const useStyles = makeStyles({
   },
   logo: {
     height: "100%",
-    width: "80px",
     borderRadius: "0px",
     cursor: "pointer",
     display: "flex",
     alignItems: "center",
+    "& img": {
+      height: 24,
+    },
   },
 });

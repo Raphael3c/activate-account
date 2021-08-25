@@ -1,12 +1,17 @@
 import React from 'react'
 import {Option} from 'components/Option'
 
+import {useStyles} from './ActivateMethod.style'
+
 import smsReceived from '_assets/img/icn-sms-recebido.svg'
 import cardReceived from '_assets/img/icn-cartao-recebido.svg'
 
 export const ActivateMethod: React.FC = () => {
+
+  const styles = useStyles();
+
   return (
-    <div>
+    <div className={styles.containerOption}>
       <Option 
         title={"Recebi SMS"} 
         description={"Se você recebeu uma transferência ou um código de ativação no celular"}

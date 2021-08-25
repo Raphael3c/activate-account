@@ -6,7 +6,7 @@ import companyLogo from "_assets/img/logo.svg";
 import { useStyles } from "./AppBar.style";
 
 interface AppBarProps {
-  homeRoute?: string;
+  homeRoute: string;
   action?: React.ReactNode;
 }
 
@@ -17,7 +17,7 @@ export const AppBar: React.FC<AppBarProps> = ({
   const style = useStyles();
   const history = useHistory();
 
-  const onLogoClick = () => console.log("Teste");
+  const onLogoClick = () => history.push(homeRoute);
 
   return (
     <MuiAppBar color="primary" position="relative">

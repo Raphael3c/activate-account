@@ -1,4 +1,4 @@
-import { createTheme, darken, lighten } from "@material-ui/core";
+import { createMuiTheme, darken, lighten } from "@material-ui/core";
 
 export const colors = {
   primary: {
@@ -17,7 +17,7 @@ export const textColors = {
   gray: "#555555",
 };
 
-export const theme = createTheme({
+export const theme = createMuiTheme({
   palette: {
     action: {
       disabledBackground: lighten(textColors.gray, 0.25),

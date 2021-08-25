@@ -18,19 +18,17 @@ export const useStyles = makeStyles<typeof theme, StylesProps>({
   },
   header: {
     padding: padding,
-    background: "#f9f9f9f9",
   },
   main: {
     flex: 1,
     backgroundColor: "#FFFFFF",
-    //padding: padding,
-    overflow: 'auto',
-    position: 'relative'
+    padding: padding,
   },
   footer: {
     width: "100%",
-    padding: "16px 16px 24px 16px",
+    padding: padding,
     position: ({ footerPosition }) => footerPosition ?? "relative",
+    backgroundColor: theme.palette.background.default,
     bottom: 0,
     left: 0,
     right: 0,

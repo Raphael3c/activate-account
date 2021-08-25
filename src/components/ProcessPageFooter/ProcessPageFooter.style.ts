@@ -30,18 +30,4 @@ export const useStyles = makeStyles({
       right: 0,
     },
   },
-
-  backLabel: {
-    display: 'inline-block',
-    transform: 'scale(0.95, 1)',
-    fontSize: '12px',
-    fontWeight: 400,
-    fontStyle: 'normal',
-    fontFamily: 'Roboto',
-    lineHeight: '14.06px',
-  },
-
-  imgBack:{
-    marginTop: '2px'
-  }
 });

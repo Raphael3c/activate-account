@@ -10,7 +10,7 @@ export const ActivateAccount: React.FC = () => {
   return (
     <PageContainer>
         <ProcessPageLayout 
-          appBar={<AppBar />}
+          appBar={<AppBar homeRoute={'/'}/>}
 
           header={
             <ProcessDescriptionHeader 
@@ -27,6 +27,8 @@ export const ActivateAccount: React.FC = () => {
           footer={
             <ProcessPageFooter />
           }
+
+          footerPosition={'fixed'}
         
         />
     </PageContainer> 

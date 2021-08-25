@@ -2,7 +2,7 @@ import { makeStyles, Theme } from "@material-ui/core";
 import { colors, textColors } from "_config/theme";
 
 export interface ButtonStylesProps {
-  variant?: "outlined" | "contained";
+  variant?: "outlined" | "contained" | "text";
   size?: "small" | "medium" | "large";
   palette?: "primary" | "secondary";
 }
@@ -11,28 +11,40 @@ export const useStyles = makeStyles<Theme, ButtonStylesProps, "button">({
   button: {
     height: 36,
     fontSize: 12,
+    borderRadius: 4,
     backgroundColor: ({ palette, variant }) => {
-      if (variant === "outlined") return "transparent";
+      switch (variant) {
+        case "contained":
+          return palette === "primary" ? colors.primary.main : "white";
 
-      return palette === "primary" ? colors.primary.main : "white";
+        case "outlined":
+          return "transparent";
+
+        default:
+          return undefined;
+      }
+    },
+    border: ({ palette, variant }) => {
+      switch (variant) {
+        case "contained":
+          return "0.5px solid transparent";
+
+        default:
+          return palette === "primary" ? colors.primary.main : "white";
+      }
     },
     color: ({ palette, variant }) => {
-      if (variant === "outlined") return textColors.primary;
+      switch (variant) {
+        case "contained":
+          return palette === "primary" ? "white" : colors.primary.main;
 
-      return palette === "primary" ? "white" : textColors.primary;
+        default:
+          return `0.5px solid ${
+            palette === "primary" ? colors.primary.main : colors.secondary
+          }`;
+      }
     },
-    borderRadius: 4,
 
-    "&.MuiButton-contained": {
-      border: "0.5px solid transparent",
-    },
-
-    "&.MuiButton-outlined": {
-      border: ({ palette }) =>
-        `0.5px solid ${
-          palette === "primary" ? colors.primary.main : colors.secondary
-        }`,
-    },
     "& .MuiButton-label": {
       textTransform: "none",
       textAlign: "center",
