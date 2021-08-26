@@ -1,10 +1,8 @@
 import React from 'react';
 import { Router } from 'components/Router'
-import { ThemeProvider, Box } from '@material-ui/core'
+import { ThemeProvider, Box, CssBaseline} from '@material-ui/core'
 import { theme } from '_config/theme'
 import { useStyle } from "./App.style";
-
-import './App.scss'
 
 export const App: React.FC = () => {
 
@@ -12,6 +10,7 @@ export const App: React.FC = () => {
   
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Box className={style.app}>
             <Router />
       </Box>
