@@ -3,10 +3,8 @@ import { theme } from "_config/theme";
 
 export const useStyles = makeStyles({
   headerWrapper:{
-    backgroundColor: theme.palette.background.default,
     margin: '-16px',
     padding: '16px',
-
   },
   
   footerWrapper:{

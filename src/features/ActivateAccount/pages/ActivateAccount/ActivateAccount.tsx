@@ -18,13 +18,11 @@ export const ActivateAccount: React.FC = () => {
           appBar={<AppBar homeRoute={'/'}/>}
 
           header={
-            <div className={styles.headerWrapper}>
               <ProcessDescriptionHeader 
                 title={"Ativar Conta"}
                 subtitle={"Primeiro passo"}
                 description={"Para ativar sua conta, escolha uma das opções abaixo."}
               />
-            </div>     
           }
 
           main={
@@ -36,7 +34,7 @@ export const ActivateAccount: React.FC = () => {
               <ProcessPageFooter />
             </Box>
           }        
-        />
+        />  
     </PageContainer> 
   );
 }
