@@ -1,6 +1,21 @@
 import { makeStyles } from "@material-ui/core";
 
 export const useStyles = makeStyles({
+
+  titleOptionCard: {
+    fontWeight: 300,
+    fontSize: '12px',
+    lineHeight: '14,06px',
+    color: '#555555',
+  },
+
+  nameCardHolder:{
+    fontWeight: 400,
+    fontSize: '12px',
+    lineHeight: '14.06px',
+    color: '#555555',
+  },
+
   buttonOption:{
     width: '100%',
     borderRadius: 0,
@@ -32,6 +47,7 @@ export const useStyles = makeStyles({
     height: '27px',
     lineHeight: "14.06px",
     textAlign: 'left',
+    letterSpacing: 0,
   },
 
   contentContainer:{
@@ -39,11 +55,25 @@ export const useStyles = makeStyles({
     justifyContent: 'space-between',
     width: '100%',
     margin: '15px 26px 16px 26px',
+    alignItems: 'center'
   },
 
   labelContainer:{
     textTransform: 'none',
     textAlign: 'left',
     width: '72.766%',
+  },
+
+  cardCategory:{
+    fontWeight: 400,
+    fontSize: '10px',
+    lineHeight: '11,72px',
+    marginTop: '-4px',
+    marginLeft: '5px',
+  },
+
+  cardFlagCategoryContainer:{
+    display: 'flex',
+    flexDirection: 'column',
   }
 });

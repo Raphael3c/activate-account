@@ -26,7 +26,7 @@ export const ActivateAccount: React.FC = () => {
           }
 
           main={
-            <ActivateMethod />
+              <ActivateMethod />
           }
 
           footer={
