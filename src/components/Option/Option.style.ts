@@ -75,5 +75,6 @@ export const useStyles = makeStyles({
   cardFlagCategoryContainer:{
     display: 'flex',
     flexDirection: 'column',
+    textTransform: 'none',
   }
 });
